@@ -1,0 +1,264 @@
+:root {
+  font-family:
+    "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", system-ui, sans-serif;
+  color: #f6e2bd;
+  background: transparent;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.pet-shell {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+.incense-stage,
+.offer-shell,
+.control-panel,
+.wish-dialog,
+.context-menu {
+  position: absolute;
+}
+
+.mode-main .incense-stage {
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+}
+
+.mode-main #incense-frame {
+  width: min(100vw, 100vh);
+  height: min(100vw, 100vh);
+  object-fit: contain;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+.mode-offer .incense-stage,
+.mode-main .offer-shell,
+.mode-main .wish-dialog,
+.mode-main .control-panel,
+.offer-shell[hidden],
+.incense-stage[hidden],
+.control-panel[hidden],
+.wish-dialog[hidden],
+.context-menu[hidden] {
+  display: none;
+}
+
+.mode-offer .offer-shell {
+  inset: 0;
+  display: grid;
+  grid-template-rows: 8px 34px 1fr;
+  gap: 3px;
+  width: 100vw;
+  height: 100vh;
+  padding: 4px 6px 5px;
+  border: 2px solid rgba(96, 58, 38, 0.8);
+  border-radius: 8px;
+  background: rgba(33, 22, 19, 0.82);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 225, 170, 0.2),
+    0 5px 0 rgba(0, 0, 0, 0.22);
+}
+
+.offer-drag-handle {
+  width: 100%;
+  height: 8px;
+  border-radius: 99px;
+  background: rgba(255, 226, 170, 0.28);
+}
+
+#offer-button {
+  width: 100%;
+  min-width: 0;
+  height: 34px;
+  border: 2px solid #e2b87a;
+  border-radius: 6px;
+  color: #3b2118;
+  background: linear-gradient(#ffe4ad, #d99d5e);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.36),
+    0 3px 0 #6f3c2a;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+#offer-button:active {
+  transform: translateY(2px);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.28),
+    0 1px 0 #6f3c2a;
+}
+
+#offer-caption {
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  color: #ffe4b1;
+  font-size: 10px;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 2px 0 #21120f;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#status-text,
+#wish-text {
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  color: #ffe4b1;
+  text-shadow: 0 2px 0 #21120f;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#status-text {
+  font-size: 12px;
+}
+
+#wish-text {
+  min-height: 16px;
+  color: #ffcf72;
+  font-size: 11px;
+}
+
+.wish-dialog,
+.context-menu {
+  z-index: 4;
+  border: 2px solid rgba(96, 58, 38, 0.95);
+  border-radius: 8px;
+  background: rgba(31, 20, 18, 0.94);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.24);
+}
+
+.wish-dialog {
+  left: 0;
+  top: 0;
+  display: grid;
+  width: 172px;
+  gap: 7px;
+  padding: 10px;
+}
+
+.wish-dialog label {
+  color: #ffe2a7;
+  font-size: 12px;
+}
+
+#wish-input {
+  width: 100%;
+  height: 30px;
+  border: 2px solid #9d7550;
+  border-radius: 5px;
+  padding: 0 6px;
+  color: #321a16;
+  background: #fff0cf;
+  outline: none;
+}
+
+.preset-wishes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+}
+
+.preset-wish,
+.dialog-actions button,
+.context-menu button {
+  border: 1px solid #8f6645;
+  border-radius: 5px;
+  color: #ffeac2;
+  background: #5a3429;
+}
+
+.preset-wish {
+  min-height: 23px;
+  padding: 0 7px;
+  overflow: hidden;
+  font-size: 11px;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dialog-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+.dialog-actions button {
+  height: 27px;
+  padding: 0 4px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+#confirm-wish {
+  color: #3b2118;
+  background: #e5b16f;
+}
+
+.context-menu {
+  width: 122px;
+  padding: 4px;
+}
+
+.context-menu.wide-menu {
+  width: 122px;
+}
+
+.context-menu button {
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.preset-wish:hover,
+.dialog-actions button:hover,
+.context-menu button:hover,
+#offer-button:hover {
+  filter: brightness(1.1);
+}

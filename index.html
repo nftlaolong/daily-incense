@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>每日上香</title>
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+
+  <body>
+    <main id="app" class="pet-shell">
+      <section class="incense-stage" data-tauri-drag-region aria-label="三炷香和香炉">
+        <img id="incense-frame" src="/incense-frames/incense_45min_01_progress_0000.png" alt="香炉" />
+      </section>
+      <section class="offer-shell" aria-live="polite">
+        <div class="offer-drag-handle" data-tauri-drag-region aria-hidden="true"></div>
+        <button id="offer-button" type="button">上香</button>
+        <p id="offer-caption">今日宜上香</p>
+      </section>
+      <section class="control-panel" hidden aria-live="polite">
+        <p id="status-text"></p>
+        <p id="wish-text"></p>
+      </section>
+      <section id="wish-dialog" class="wish-dialog wish-panel" hidden>
+        <label for="wish-input">许个愿</label>
+        <input id="wish-input" maxlength="24" placeholder="今日顺遂" />
+        <div id="preset-wishes" class="preset-wishes" aria-label="愿望预设"></div>
+        <div class="dialog-actions">
+          <button id="confirm-wish" type="button">开始上香</button>
+          <button id="cancel-wish" type="button">取消</button>
+        </div>
+      </section>
+      <nav id="context-menu" class="context-menu" hidden>
+        <button type="button" data-menu-action="offer">上香</button>
+        <button type="button" data-menu-action="toggle">显示/隐藏</button>
+        <button type="button" data-menu-action="quit">退出</button>
+      </nav>
+    </main>
+  </body>
+</html>
