@@ -13,9 +13,9 @@ jobs:
       matrix:
         include:
           - platform: macos-latest
-            args: ""
-          - platform: windows-latest
-            args: ""
+            args: "--bundles app,dmg"
+          - platform: windows-2022
+            args: "--bundles nsis"
 
     runs-on: ${{ matrix.platform }}
 
