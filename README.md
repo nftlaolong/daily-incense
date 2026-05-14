@@ -2,6 +2,16 @@
 
 每日上香是一款轻量的跨平台桌宠应用。打开后，桌面上会出现一个小小的像素风香炉；点击“上香”，写下或选择一个愿望，三炷香会慢慢燃烧，伴随烟雾和香灰。香燃尽后窗口自动隐藏，应用仍在系统托盘静默常驻，方便下一次上香。
 
+## 截图
+启动：
+<img width="407" height="400" alt="Snipaste_2026-05-14_09-03-08" src="https://github.com/user-attachments/assets/7ebb77e8-3868-4950-b46e-dd5af2a345f9" />
+选择愿望：
+<img width="426" height="635" alt="Snipaste_2026-05-14_09-05-52" src="https://github.com/user-attachments/assets/d75d6f15-26a9-4feb-8cbe-08018afde6c6" />
+上香：
+<img width="332" height="335" alt="Snipaste_2026-05-14_09-07-16" src="https://github.com/user-attachments/assets/27003551-a72a-4095-9a57-ef87d41c4c78" />
+
+祝大家万事顺遂
+
 ## 功能
 
 - Windows / macOS 桌面安装应用
